@@ -7,7 +7,7 @@ const EditUser = () => {
     let params = useParams();
     useEffect( () => {
         async function fetchData() {
-            let userData = await axios.get(`http://localhost:3001/user/${params.id}`)
+            let userData = await axios.get(`https://formbackk.herokuapp.com/user/${params.id}`)
             formik.setValues(userData.data)
         }
         fetchData()
@@ -31,7 +31,7 @@ const EditUser = () => {
 
                 // delete values["_id"]
 
-                await axios.put(`http://localhost:3001/user/${params.id}`, values)
+                await axios.put(`https://formbackk.herokuapp.com/user/${params.id}`, values)
                 navigate("/")
             } catch (error) {
                 console.log(error)

@@ -17,8 +17,7 @@ function Form() {
         },
         onSubmit: async values => {
             try {
-                await axios.post("http://localhost:3001/create-form", values)
-                //    await axios.post("https://mern-model.herokuapp.com/create-user",values) 
+                await axios.post("https://formbackk.herokuapp.com/create-form", values)
                 navigate("/")
             } catch (error) {
                 console.log(error)
